@@ -4,6 +4,8 @@ This is a repo to demonstrate a bug with underscored option on sequelize.
 
 We had the problem when we moved from sequelize 4 to 5.
 
+We are using mysql.
+
 It is coming from the option underscored we are using. When trying to update an association fields:
 
 If we define "project_id" in our database, linking a user and a project.
@@ -19,3 +21,4 @@ node main.js
 ```
 
 You can now check the user database, the first user got a null value in project_id, the second got the good value
+In sequelize 4 it's the exact opposite

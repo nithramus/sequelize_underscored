@@ -47,9 +47,9 @@ async function createUser() {
       await Project.create({name: 'test' });
       await Project.create({name: 'test' });
 
-      //################# Here the tests
+      //################# Here the tests, if you use sequelize 4, we will have the exact opposite
 
-      // This will not work and project_id will not be set
+      // This will not work and project_id will not be set (NULL)
       await User.create({first_name: 'firstUser', last_name: 'firstUser', project_id: 1})
       // This will work and it will set project_id to 2
       await User.create({first_name: 'secondUser', last_name: 'secondUser', projectId: 2})    
